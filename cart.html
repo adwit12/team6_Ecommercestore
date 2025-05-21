@@ -273,3 +273,22 @@
             <p class="description">An epic high-fantasy adventure.</p>
             <button onclick="addtocart('The Lord of the Rings')">Add to Cart</button>
     </div>
+    <script>
+    // Array to store items in cart
+    var cart = [];
+
+    // Add book to cart
+    function addToCart(bookTitle) {
+        cart.push(bookTitle);
+        updateCartCount();
+        console.log(bookTitle + ' added to cart.');
+        alert(bookTitle + ' has been added to your cart.');
+    }
+
+    // Update cart count display
+    function updateCartCount() {
+        document.getElementById('cart-count').textContent = cart.length;
+    }
+  </script>
+</body>
+</html>
